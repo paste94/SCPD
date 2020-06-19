@@ -8,7 +8,7 @@
 #include <chrono>
 
 #define MAX_SIZE 1000000
-#define FILE "./rand_int_20.txt"
+#define FILE "./rand_int_1M.txt"
 
 using namespace std;
 
