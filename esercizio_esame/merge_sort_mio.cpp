@@ -7,9 +7,9 @@
 #include <bits/stdc++.h>
 #include <chrono>
 
-#define MAX_SIZE 100000000
-#define N_THREADS 3
-#define FILE "./rand_int_100M.txt"
+#define MAX_SIZE 1000000
+#define N_THREADS 1
+#define FILE "./rand_int_1M.txt"
 
 using namespace std;
 
