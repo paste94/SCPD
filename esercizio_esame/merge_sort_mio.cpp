@@ -8,7 +8,7 @@
 #include <chrono>
 
 #define MAX_SIZE 1000000
-#define FILE "./rand_int_1M.txt"
+#define FILE "./rand_int_20.txt"
 
 using namespace std;
 
@@ -29,7 +29,7 @@ int N_THREADS;
 
 int main(int argc, char *argv[]){
 
-    N_THREADS = std::stoi(argv[1]);
+    N_THREADS = 4;//std::stoi(argv[1]);
     std::time_t today = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     cout << "--- New computation ---\n" << std::ctime(&today);
 
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]){
 
     args[N_THREADS-1].end = size-1;
 
-    //print_array(arr, size);
+    print_array(arr, size);
 
     //----- Create thread and sort subarrays -----//
     for(int i = 0; i < N_THREADS; i++){
@@ -77,14 +77,14 @@ int main(int argc, char *argv[]){
         pthread_join( threads[j], NULL); 
     }
 
-    //print_array(arr, size);
+    print_array(arr, size);
 
     //----- Merge subarrays -----//
     merge_subarrays(args, size);
     auto t2 = chrono::high_resolution_clock::now();
     chrono::duration<double,milli> elapsed = t2 - t1;
 
-    //print_array(arr, size);
+    print_array(arr, size);
     
     //----- Check if resulting arrray is sorted -----//
     if(is_sorted(arr, size)){
@@ -200,23 +200,26 @@ void merge_subarrays(void* arguments, int size){
     struct ms_struct *args = (struct ms_struct *)arguments;
     int* arr = args->arr;
     int max_len = args[N_THREADS-1].end - args[N_THREADS-1].start;
-    int sub_arr[N_THREADS][max_len]; // Matrix containing tmp arrays
+    int sub_arr[N_THREADS][max_len+1]; // Matrix containing tmp arrays
     int index[N_THREADS]; //Indexes of the current used element in sub_array
     int len_arr[N_THREADS]; //Length of each sub_array
 
     //print_array(arr, size);
+    printf("\n");
 
     // -- init sub_arr -- //
     for(int i = 0; i < N_THREADS; i++){
         index[i] = 0;
         len_arr[i] = args[i].end - args[i].start + 1; // Temporary arr lenght;
-
+        cout << len_arr[i] << "***** " << "; " << sub_arr[0][9] << "\n";
         for(int j = 0; j < len_arr[i]; j++){
+            cout << "i: " << i << " j: " << j << " index: " << args[i].start + j << " = " << arr[args[i].start + j];
             sub_arr[i][j] = arr[args[i].start + j];
+            cout << " = " << sub_arr[i][j] << "; " << sub_arr[0][9] << "\n";
         }
     }
 
-    /*
+    
     for(int i = 0; i < N_THREADS; i++){
         cout << "[ ";
         for(int j = 0; j < len_arr[i]; j++){
@@ -224,7 +227,7 @@ void merge_subarrays(void* arguments, int size){
         }
         cout << " ]\n";
     }
-    */
+    
     
 
 

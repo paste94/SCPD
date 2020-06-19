@@ -1,4 +1,4 @@
 #!/bin/bash
 
-for i in {1..300}; do ./ms_mio.o >> ms_mio.log; done
+for i in {1..15}; do ./ms_mio.o $i >> ms_mio.log; done
 

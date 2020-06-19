@@ -2098,3 +2098,240 @@ FILE: ./rand_int_1M.txt
 THREADS: 3
 TIME: 235.819 milliseconds.
 
+--- New computation ---
+Fri Jun 19 11:43:45 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 1
+TIME: 499.754 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:46 2020
+99997768>30 at index 999992
+
+
+Array NOT sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 2
+TIME: 281.672 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:47 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 3
+TIME: 221.577 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:47 2020
+99996656>30 at index 999980
+
+
+Array NOT sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 4
+TIME: 185.846 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:47 2020
+99996656>155 at index 999980
+
+
+Array NOT sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 5
+TIME: 174.982 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:48 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 6
+TIME: 168.06 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:48 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 7
+TIME: 172.365 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:49 2020
+99995622>486 at index 999969
+
+
+Array NOT sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 8
+TIME: 186.861 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:49 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 9
+TIME: 193.173 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:49 2020
+99993585>119 at index 999955
+
+
+Array NOT sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 10
+TIME: 202.096 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:50 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 11
+TIME: 206.548 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:50 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 12
+TIME: 205.677 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:51 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 13
+TIME: 223.461 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:51 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 14
+TIME: 223.104 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:43:51 2020
+Array sorted. 
+FILE: ./rand_int_1M.txt
+THREADS: 15
+TIME: 243.594 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 1
+TIME: 0.6773 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+83>9 at index 18
+
+
+Array NOT sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 2
+TIME: 0.4486 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 3
+TIME: 0.6644 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+32>23 at index 8
+
+
+Array NOT sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 4
+TIME: 0.605 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+42>23 at index 12
+
+
+Array NOT sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 5
+TIME: 0.9137 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 6
+TIME: 1.0434 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 7
+TIME: 1.2645 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 8
+TIME: 1.3258 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 9
+TIME: 1.9802 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+25>8 at index 4
+
+
+Array NOT sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 10
+TIME: 1.6205 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 11
+TIME: 2.1189 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 12
+TIME: 2.1283 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 13
+TIME: 2.2407 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 14
+TIME: 2.6061 milliseconds.
+
+--- New computation ---
+Fri Jun 19 11:44:30 2020
+Array sorted. 
+FILE: ./rand_int_20.txt
+THREADS: 15
+TIME: 2.6649 milliseconds.
+
