@@ -29,7 +29,7 @@ int N_THREADS;
 
 int main(int argc, char *argv[]){
 
-    N_THREADS = 4;//std::stoi(argv[1]);
+    N_THREADS = std::stoi(argv[1]);
     std::time_t today = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     cout << "--- New computation ---\n" << std::ctime(&today);
 
