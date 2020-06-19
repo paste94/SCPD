@@ -8,7 +8,6 @@
 #include <chrono>
 
 #define MAX_SIZE 1000000
-#define N_THREADS 1
 #define FILE "./rand_int_1M.txt"
 
 using namespace std;
@@ -26,7 +25,11 @@ struct ms_struct{
     int end; //r
 };
 
-int main(){
+int N_THREADS;
+
+int main(int argc, char *argv[]){
+
+    N_THREADS = std::stoi(argv[1]);
     std::time_t today = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     cout << "--- New computation ---\n" << std::ctime(&today);
 
@@ -38,6 +41,7 @@ int main(){
 
     // ----- Load array from file -----//
     std::fstream myfile(FILE, std::ios_base::in);
+
 
     int a;
     while (myfile >> a)
