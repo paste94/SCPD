@@ -2,28 +2,28 @@
 #include <fstream>
 #include <chrono>
 
-#define MAX_SIZE 10000000
-#define FILE "./rand_int_10M.txt"
+#define FILE "./rand_float_1M.txt"
 
-void merge_sort(int* arr, int l, int r);
-void merge(int* arr, int l, int m, int r);
-void print_array(int* arr, int size);
-bool is_sorted(int* arr, int size);
+void merge_sort(float arr[], int l, int r);
+void merge(float arr[], int l, int m, int r);
+void print_array(float A[], int size);
+bool is_sorted(float arr[], int size);
 
 using namespace std;
+const int MAX_SIZE = 1000000000;
 
 int main(int argc, char * argv[])
 {   
     cout<<"1\n";
     std::time_t today = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     cout << "--- New computation ---\n" << std::ctime(&today);
-    static int arr[MAX_SIZE]; // Array containing elements to sort
+    float arr[MAX_SIZE]; // Array containing elements to sort
     int size=0; // Index of the last element of arr
 
     // ----- Load array from file -----//
     std::fstream myfile(FILE, std::ios_base::in);
 
-    int a;
+    float a;
     while (myfile >> a)
     {
         arr[size] = a;
@@ -57,7 +57,7 @@ int main(int argc, char * argv[])
     l: left
     r: right
 */
-void merge_sort(int* arr, int l, int r) 
+void merge_sort(float arr[], int l, int r) 
 { 
     if (l < r) 
     {
@@ -75,14 +75,14 @@ void merge_sort(int* arr, int l, int r)
 // Merges two subarrays of arr[]. 
 // First subarray is arr[l..m] 
 // Second subarray is arr[m+1..r] 
-void merge(int* arr, int l, int m, int r) 
+void merge(float arr[], int l, int m, int r) 
 { 
     int i, j, k; 
     int n1 = m - l + 1; 
     int n2 = r - m; 
   
     /* create temp arrays */
-    static int L[MAX_SIZE/2], R[MAX_SIZE/2]; 
+    int L[n1], R[n2]; 
   
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++) 
@@ -124,14 +124,14 @@ void merge(int* arr, int l, int m, int r)
 } 
 
 
-void print_array(int* arr, int size) 
+void print_array(float arr[], int size) 
 { 
     int i; 
     for (i = 0; i < size; i++) 
         cout << arr[i] << "\n";  
 } 
 
-bool is_sorted(int* arr, int size)
+bool is_sorted(float arr[], int size)
 {
     for(int i = 1; i < size; i++)
     {

@@ -7,8 +7,9 @@
 #include <bits/stdc++.h>
 #include <chrono>
 
-#define MAX_SIZE 1000000
-#define FILE "./rand_int_1M.txt"
+#define MAX_SIZE 100000000
+#define N_THREADS 2
+#define FILE "./rand_int_100M.txt"
 
 using namespace std;
 
@@ -25,15 +26,15 @@ struct ms_struct{
     int end; //r
 };
 
-int N_THREADS;
+const int N_COLS = (MAX_SIZE/N_THREADS) + (MAX_SIZE%N_THREADS);
 
 int main(int argc, char *argv[]){
 
-    N_THREADS = std::stoi(argv[1]);
+    //N_THREADS = std::stoi(argv[1]);
     std::time_t today = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     cout << "--- New computation ---\n" << std::ctime(&today);
 
-    int arr[MAX_SIZE]; // Array containing elements to sort
+    static int arr[MAX_SIZE]; // Array containing elements to sort
     int size=0; // Index of the last element of arr
     int size_per_proc; // Number of elements for each processor
     pthread_t threads[N_THREADS]; // Threads
@@ -80,9 +81,13 @@ int main(int argc, char *argv[]){
     //print_array(arr, size);
 
     //----- Merge subarrays -----//
-    merge_subarrays(args, size);
     auto t2 = chrono::high_resolution_clock::now();
-    chrono::duration<double,milli> elapsed = t2 - t1;
+    merge_subarrays(args, size);
+    auto t3 = chrono::high_resolution_clock::now();
+    chrono::duration<double,milli> elapsed_tot = t3 - t1;
+    chrono::duration<double,milli> elapsed_merge_sub = t3 - t2;
+    chrono::duration<double,milli> elapsed_merge_sort = t2 - t1;
+
 
     //print_array(arr, size);
     
@@ -93,7 +98,7 @@ int main(int argc, char *argv[]){
         cout << "Array NOT sorted. \n";
     }
 
-    cout << "FILE: " << FILE << "\nTHREADS: " << N_THREADS << "\nTIME: " << elapsed.count() << " milliseconds.\n\n";
+    cout << "FILE: " << FILE << "\nTHREADS: " << N_THREADS << "\nTIME: " << elapsed_tot.count() << " ms\n\tOF WICH MERGE SORT: " << elapsed_merge_sort.count() << " ms;" << "\n\tOF WICH MERGE SUBARRAYS: " << elapsed_merge_sub.count() << " ms\n\n";
 }
 
 /*  
@@ -140,10 +145,15 @@ void merge(int* arr, int l, int m, int r)
     int i, j, k; 
     int n1 = m - l + 1; 
     int n2 = r - m; 
+    const int arr_size = (MAX_SIZE/2)+1;
     
     //cout << n1 << " - " << n2 << "\n";
     /* create temp arrays */
-    int L[n1], R[n2]; 
+    //int* L = new int[n1];
+    //int* R = new int[n2];
+    //Li creo staticamente perche', dinamicamente, impiega molto tempo in piu'
+    static thread_local int L[arr_size]; 
+    static thread_local int R[arr_size]; 
     //cout<<"PRIMA\n";
   
     /* Copy data to temp arrays L[] and R[] */
@@ -197,13 +207,14 @@ void merge(int* arr, int l, int m, int r)
     This function merges all subarrays into one 
 */
 void merge_subarrays(void* arguments, int size){
+
     struct ms_struct *args = (struct ms_struct *)arguments;
     int* arr = args->arr;
-    int max_len = args[N_THREADS-1].end - args[N_THREADS-1].start;
-    int sub_arr[N_THREADS][max_len+1]; // Matrix containing tmp arrays
+    static int sub_arr[N_THREADS][N_COLS+1];
+    //int** sub_arr = new int*[N_THREADS]; // Matrix containing tmp arrays
     int index[N_THREADS]; //Indexes of the current used element in sub_array
     int len_arr[N_THREADS]; //Length of each sub_array
-
+    
     //print_array(arr, size);
     //printf("\n");
 
@@ -265,14 +276,15 @@ void print_array(int* arr, int size)
 
 bool is_sorted(int* arr, int size)
 {
+    bool b = true;
     for(int i = 1; i < size; i++)
     {
         if(arr[i-1] > arr[i]){
             cout << arr[i-1] << ">" << arr[i]<< " at index "<<i<<"\n\n";
             //print_array(arr, size);
             cout << "\n";
-            return false;
+            b=false;
         }
     }
-    return true;
+    return b;
 }
