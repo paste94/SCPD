@@ -1,14 +1,23 @@
-#include<iostream>
+#include <iostream>
+#include <fstream>
+#include <chrono>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 using namespace std;
 
-const int m = 100000000;
-
-
 int main(){
-    cout << "yo\n";
+    int a[15];
+    for(int i = 0; i < 15; i++){
+        a[i]=i;
+    }
 
-    static int arr[m];
+    int b[15];
+    b = a;
 
-    cout << "yoyo\n";
+    for(int i = 0; i < 15; i++){
+        cout << b[i] << "; ";
+    }
+    cout << "\n";
 }

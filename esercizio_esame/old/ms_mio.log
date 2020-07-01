@@ -1,0 +1,243 @@
+--- New parallel computation ---
+Wed Jun 24 12:21:49 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 1
+TIME: 38366.5 ms
+	OF WICH MERGE SORT: 37073.5 ms;
+	OF WICH MERGE SUBARRAYS: 1293.01 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:23:08 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 2
+TIME: 20599.6 ms
+	OF WICH MERGE SORT: 18091.5 ms;
+	OF WICH MERGE SUBARRAYS: 2508.11 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:25:09 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 3
+TIME: 15157.9 ms
+	OF WICH MERGE SORT: 11989.7 ms;
+	OF WICH MERGE SUBARRAYS: 3168.13 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:26:02 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 4
+TIME: 12805.3 ms
+	OF WICH MERGE SORT: 9118.23 ms;
+	OF WICH MERGE SUBARRAYS: 3687.04 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:26:53 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 5
+TIME: 11597.8 ms
+	OF WICH MERGE SORT: 7428.87 ms;
+	OF WICH MERGE SUBARRAYS: 4168.93 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:27:43 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 6
+TIME: 11097.6 ms
+	OF WICH MERGE SORT: 6312.92 ms;
+	OF WICH MERGE SUBARRAYS: 4784.73 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:28:09 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 7
+TIME: 10941.8 ms
+	OF WICH MERGE SORT: 5629.16 ms;
+	OF WICH MERGE SUBARRAYS: 5312.59 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:28:57 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 8
+TIME: 10902.5 ms
+	OF WICH MERGE SORT: 5148.39 ms;
+	OF WICH MERGE SUBARRAYS: 5754.15 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:29:23 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 9
+TIME: 11117.9 ms
+	OF WICH MERGE SORT: 4776.79 ms;
+	OF WICH MERGE SUBARRAYS: 6341.11 ms
+
+--- New parallel computation ---
+Wed Jun 24 12:29:53 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 10
+TIME: 11433.8 ms
+	OF WICH MERGE SORT: 4536.04 ms;
+	OF WICH MERGE SUBARRAYS: 6897.76 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:38:24 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 11
+TIME: 11985.4 ms
+	OF WICH MERGE SORT: 4366.02 ms;
+	OF WICH MERGE SUBARRAYS: 7619.42 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:39:38 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 12
+TIME: 12839.2 ms
+	OF WICH MERGE SORT: 4190.33 ms;
+	OF WICH MERGE SUBARRAYS: 8648.91 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:40:09 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 13
+TIME: 12907.1 ms
+	OF WICH MERGE SORT: 4091.31 ms;
+	OF WICH MERGE SUBARRAYS: 8815.76 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:41:09 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 14
+TIME: 12919.5 ms
+	OF WICH MERGE SORT: 4031 ms;
+	OF WICH MERGE SUBARRAYS: 8888.52 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:47:00 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 15
+TIME: 13766.5 ms
+	OF WICH MERGE SORT: 4002.62 ms;
+	OF WICH MERGE SUBARRAYS: 9763.83 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:47:29 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 16
+TIME: 14751.2 ms
+	OF WICH MERGE SORT: 3964.69 ms;
+	OF WICH MERGE SUBARRAYS: 10786.5 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:48:08 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 17
+TIME: 15366.1 ms
+	OF WICH MERGE SORT: 3969.99 ms;
+	OF WICH MERGE SUBARRAYS: 11396.1 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:50:10 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 18
+TIME: 16080.7 ms
+	OF WICH MERGE SORT: 3988.24 ms;
+	OF WICH MERGE SUBARRAYS: 12092.4 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:50:54 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 19
+TIME: 16859.6 ms
+	OF WICH MERGE SORT: 3998.53 ms;
+	OF WICH MERGE SUBARRAYS: 12861.1 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:51:30 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 20
+TIME: 16411.4 ms
+	OF WICH MERGE SORT: 4045.98 ms;
+	OF WICH MERGE SUBARRAYS: 12365.4 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:52:01 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 21
+TIME: 16775.7 ms
+	OF WICH MERGE SORT: 4084.98 ms;
+	OF WICH MERGE SUBARRAYS: 12690.7 ms
+
+--- New parallel computation ---
+Wed Jun 24 14:52:46 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 25
+TIME: 19049.9 ms
+	OF WICH MERGE SORT: 4316.65 ms;
+	OF WICH MERGE SUBARRAYS: 14733.3 ms
+
+--- New parallel computation ---
+Wed Jun 24 15:09:41 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 30
+TIME: 21594.1 ms
+	OF WICH MERGE SORT: 4663.25 ms;
+	OF WICH MERGE SUBARRAYS: 16930.9 ms
+
+--- New parallel computation ---
+Wed Jun 24 15:10:26 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 35
+TIME: 24414.4 ms
+	OF WICH MERGE SORT: 5161.14 ms;
+	OF WICH MERGE SUBARRAYS: 19253.3 ms
+
+--- New parallel computation ---
+Wed Jun 24 15:11:55 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 40
+TIME: 27196.5 ms
+	OF WICH MERGE SORT: 5604.55 ms;
+	OF WICH MERGE SUBARRAYS: 21591.9 ms
+
+--- New parallel computation ---
+Wed Jun 24 15:12:43 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 45
+TIME: 29402.4 ms
+	OF WICH MERGE SORT: 6187.26 ms;
+	OF WICH MERGE SUBARRAYS: 23215.2 ms
+
+--- New parallel computation ---
+Thu Jun 25 10:50:26 2020
+Array sorted. 
+FILE: ./rand_int_100M.txt
+THREADS: 45
+TIME: 29353.8 ms
+	OF WICH MERGE SORT: 6146.25 ms;
+	OF WICH MERGE SUBARRAYS: 23207.6 ms
+
